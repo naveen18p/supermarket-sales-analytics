@@ -148,7 +148,6 @@ DIVIDE(
     0
 )
 
-📈 Dashboard Pages
 ## 📈 Dashboard Pages
 
 ### 1. Executive Overview
