@@ -90,6 +90,7 @@ Excluded Rows    : 74
 🗃 Data Modeling
 
 The Power BI model follows a star-schema style structure.
+```text
               Customers
                   │
                   │
@@ -101,6 +102,7 @@ Products ───── Sales ───── Stores
 DateTable ───── Sales
 
 Stores ───── Targets
+```
 The sales_clean table acts as the main fact table.
 
 Dimension tables include:
