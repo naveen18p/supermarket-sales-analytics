@@ -149,6 +149,45 @@ DIVIDE(
 )
 
 📈 Dashboard Pages
+## 📈 Dashboard Pages
+
+### 1. Executive Overview
+
+Provides a high-level view of sales, profit, customers, transactions, and overall business performance.
+
+![Executive Overview](executive_overview.png)
+
+---
+
+### 2. Product Analysis
+
+Analyzes product sales, profitability, categories, product margins, and returned products.
+
+![Product Analysis](product_analysis.png)
+
+---
+
+### 3. Customer Analysis
+
+Analyzes customer behavior, top customers, customer types, cities, and customer sales trends.
+
+![Customer Analysis](customer_analysis.png)
+
+---
+
+### 4. Store & Target Performance
+
+Compares store sales, profit, regional performance, sales targets, and target achievement.
+
+![Store & Target Performance](store_&_target_analysis.png)
+
+---
+
+### 5. Returns Analysis
+
+Analyzes return reasons, returned units, return rate, top returned products, stores, and categories.
+
+![Returns Analysis](return_analysis.png)
 
 The report contains 5 interactive dashboard pages.
 
