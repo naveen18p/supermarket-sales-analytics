@@ -32,3 +32,11 @@ DAX Measures
 Interactive Dashboard
       ↓
 Business Insights
+## 🛠 Tools & Technologies
+
+- SQL Server
+- SQL Server Management Studio (SSMS)
+- Power BI
+- DAX
+- CSV
+- GitHub
