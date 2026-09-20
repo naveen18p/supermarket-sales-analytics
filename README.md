@@ -242,6 +242,7 @@ High-value customers can be identified for retention and loyalty strategies.
 Store performance can be compared against targets to identify underperforming locations.
 Return rate is more meaningful than raw return quantity when comparing products.
 Category and regional analysis help identify strong and weak areas of the business
+
 🎯 Business Value
 
 This dashboard can help management:
