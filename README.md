@@ -203,38 +203,64 @@ The report contains 5 interactive dashboard pages.
 Some important analytical observations from the project:
 
 High sales do not always mean high profitability.
+
 Product profitability should be analyzed separately from revenue.
+
 High-value customers can be identified for retention and loyalty strategies.
+
 Store performance can be compared against targets to identify underperforming locations.
+
 Return rate is more meaningful than raw return quantity when comparing products.
+
 Category and regional analysis help identify strong and weak areas of the business
+
 
 🎯 Business Value
 
 This dashboard can help management:
 
 Monitor overall sales and profitability
+
 Identify top and bottom performing products
+
 Understand customer behavior
+
 Track store-level performance
+
 Compare actual sales against targets
+
 Investigate high-return products
+
 Support data-driven business decisions
 
 🚀 Skills Demonstrated
+
 SQL Data Cleaning
+
 Data Quality Validation
+
 SQL Joins
+
 CTEs
+
 Window Functions
+
 Data Modeling
+
 Star Schema
+
 DAX
+
 Filter Context
+
 Time Intelligence
+
 KPI Design
+
 Data Visualization
+
 Business Analysis
+
 Power BI Dashboard Development
 
 📌 Project Type
