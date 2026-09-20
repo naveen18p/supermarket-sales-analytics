@@ -55,6 +55,7 @@ Time period: January 2025 – December 2025
 - SQL Server Management Studio (SSMS)
 - Power BI
 - DAX
+  
 | Table     | Purpose                                  |
 | --------- | ---------------------------------------- |
 | Sales     | Transaction-level sales data             |
@@ -63,6 +64,7 @@ Time period: January 2025 – December 2025
 | Stores    | Store and regional information           |
 | Returns   | Product return transactions              |
 | Targets   | Monthly store sales and profit targets   |
+
 🧹 Data Cleaning & Quality Checks
 
 Before building the dashboard, the raw data was validated and cleaned using SQL Server.
@@ -84,6 +86,7 @@ Returns linked to nonexistent sales
 Raw Sales Rows   : 20,024
 Clean Sales Rows : 19,950
 Excluded Rows    : 74
+
 🗃 Data Modeling
 
 The Power BI model follows a star-schema style structure.
@@ -106,6 +109,7 @@ Customers
 Products
 Stores
 DateTable
+
 📐 Key DAX Measures
 Total Sales =
 SUMX(
@@ -141,6 +145,7 @@ DIVIDE(
     [Total Units Sold],
     0
 )
+
 📈 Dashboard Pages
 
 The report contains 5 interactive dashboard pages.
@@ -161,6 +166,7 @@ Monthly Sales Trend
 Sales by Category
 Sales by Store
 Top Products
+
 2. Product Analysis
 
 Focuses on product and category performance.
@@ -177,6 +183,7 @@ Profit by Category
 Product Profit Margin
 Most Returned Products
 Return Rate
+
 3. Customer Analysis
 
 Analyzes customer behavior and customer value.
@@ -192,6 +199,7 @@ Sales by Customer Type
 Customers by City
 Customer Sales Trend
 Customer Details
+
 4. Store & Target Performance
 
 Compares store performance against business targets.
@@ -207,6 +215,7 @@ Sales vs Target
 Profit by Store
 Performance by Region
 Monthly Target Performance
+
 5. Returns Analysis
 
 Analyzes product return behavior and operational issues.
@@ -220,6 +229,7 @@ Return Reasons
 Top Returned Products
 Returns by Store
 Returns by Category
+
 💡 Key Business Insights
 
 Some important analytical observations from the project:
@@ -241,6 +251,7 @@ Track store-level performance
 Compare actual sales against targets
 Investigate high-return products
 Support data-driven business decisions
+
 🚀 Skills Demonstrated
 SQL Data Cleaning
 Data Quality Validation
@@ -256,11 +267,13 @@ KPI Design
 Data Visualization
 Business Analysis
 Power BI Dashboard Development
+
 📌 Project Type
 
 Portfolio / Learning Project
 
 The dataset used in this project is synthetic and was created to simulate a realistic supermarket business environment.
+
 👤 Author
 
 Naveen Kumar
