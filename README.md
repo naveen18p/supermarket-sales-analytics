@@ -33,7 +33,17 @@ Interactive Dashboard
       ↓
 Business Insights
 ## 🛠 Tools & Technologies
+📊 Dataset
 
+The project uses a realistic synthetic supermarket dataset containing:
+
+20,024 raw sales records
+1,500 customers
+220 products
+12 stores
+Returns data
+Monthly sales and profit targets
+Time period: January 2025 – December 2025
 - SQL Server
 - SQL Server Management Studio (SSMS)
 - Power BI
