@@ -282,5 +282,4 @@ The dataset used in this project is synthetic and was created to simulate a real
 Naveen Kumar
 
 Data Analytics / Data Science Learner
-- CSV
-- GitHub
+
