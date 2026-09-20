@@ -33,6 +33,12 @@ Interactive Dashboard
       ↓
 Business Insights
 ## 🛠 Tools & Technologies
+SQL Server
+SQL Server Management Studio (SSMS)
+Power BI
+DAX
+CSV
+GitHub
 📊 Dataset
 
 The project uses a realistic synthetic supermarket dataset containing:
@@ -48,5 +54,216 @@ Time period: January 2025 – December 2025
 - SQL Server Management Studio (SSMS)
 - Power BI
 - DAX
+| Table     | Purpose                                  |
+| --------- | ---------------------------------------- |
+| Sales     | Transaction-level sales data             |
+| Customers | Customer profile information             |
+| Products  | Product, category, pricing and cost data |
+| Stores    | Store and regional information           |
+| Returns   | Product return transactions              |
+| Targets   | Monthly store sales and profit targets   |
+🧹 Data Cleaning & Quality Checks
+
+Before building the dashboard, the raw data was validated and cleaned using SQL Server.
+
+The following issues were checked:
+
+Duplicate Sale IDs
+Invalid or negative quantities
+Invalid or zero unit prices
+Invalid discount values
+Missing customer information
+Unmatched Customer IDs
+Unmatched Product IDs
+Unmatched Store IDs
+Missing customer city/state
+Missing product category/subcategory
+Invalid return records
+Returns linked to nonexistent sales
+Raw Sales Rows   : 20,024
+Clean Sales Rows : 19,950
+Excluded Rows    : 74
+🗃 Data Modeling
+
+The Power BI model follows a star-schema style structure.
+              Customers
+                  │
+                  │
+Products ───── Sales ───── Stores
+                  │
+                  │
+               Returns
+
+DateTable ───── Sales
+
+Stores ───── Targets
+The sales_clean table acts as the main fact table.
+
+Dimension tables include:
+
+Customers
+Products
+Stores
+DateTable
+📐 Key DAX Measures
+Total Sales =
+SUMX(
+    sales_clean,
+    sales_clean[Quantity] *
+    sales_clean[UnitPrice] *
+    (1 - sales_clean[Discount])
+)
+Total Cost =
+SUMX(
+    sales_clean,
+    sales_clean[Quantity] *
+    RELATED(vw_products_clean[CostPrice])
+)
+Total Profit =
+[Total Sales] - [Total Cost]
+Profit Margin % =
+DIVIDE(
+    [Total Profit],
+    [Total Sales]
+)
+Total Transactions =
+DISTINCTCOUNT(
+    sales_clean[TransactionID]
+)
+Total Units Sold =
+SUM(
+    sales_clean[Quantity]
+)
+Return Rate % =
+DIVIDE(
+    [Returned Units],
+    [Total Units Sold],
+    0
+)
+📈 Dashboard Pages
+
+The report contains 5 interactive dashboard pages.
+
+1. Executive Overview
+
+Provides a high-level summary of overall business performance.
+
+Key metrics:
+
+Total Sales
+Total Profit
+Profit Margin
+Total Transactions
+Registered Customers
+Total Units Sold
+Monthly Sales Trend
+Sales by Category
+Sales by Store
+Top Products
+2. Product Analysis
+
+Focuses on product and category performance.
+
+Key analysis:
+
+Total Products
+Total Sales
+Total Profit
+Units Sold
+Top Products by Sales
+Sales by Category
+Profit by Category
+Product Profit Margin
+Most Returned Products
+Return Rate
+3. Customer Analysis
+
+Analyzes customer behavior and customer value.
+
+Key analysis:
+
+Registered Customers
+Total Sales
+Average Sales per Customer
+Transactions per Customer
+Top Customers by Sales
+Sales by Customer Type
+Customers by City
+Customer Sales Trend
+Customer Details
+4. Store & Target Performance
+
+Compares store performance against business targets.
+
+Key analysis:
+
+Total Stores
+Total Sales
+Sales Target
+Target Achievement %
+Sales by Store
+Sales vs Target
+Profit by Store
+Performance by Region
+Monthly Target Performance
+5. Returns Analysis
+
+Analyzes product return behavior and operational issues.
+
+Key analysis:
+
+Total Returns
+Returned Units
+Return Rate %
+Return Reasons
+Top Returned Products
+Returns by Store
+Returns by Category
+💡 Key Business Insights
+
+Some important analytical observations from the project:
+
+High sales do not always mean high profitability.
+Product profitability should be analyzed separately from revenue.
+High-value customers can be identified for retention and loyalty strategies.
+Store performance can be compared against targets to identify underperforming locations.
+Return rate is more meaningful than raw return quantity when comparing products.
+Category and regional analysis help identify strong and weak areas of the business
+🎯 Business Value
+
+This dashboard can help management:
+
+Monitor overall sales and profitability
+Identify top and bottom performing products
+Understand customer behavior
+Track store-level performance
+Compare actual sales against targets
+Investigate high-return products
+Support data-driven business decisions
+🚀 Skills Demonstrated
+SQL Data Cleaning
+Data Quality Validation
+SQL Joins
+CTEs
+Window Functions
+Data Modeling
+Star Schema
+DAX
+Filter Context
+Time Intelligence
+KPI Design
+Data Visualization
+Business Analysis
+Power BI Dashboard Development
+📌 Project Type
+
+Portfolio / Learning Project
+
+The dataset used in this project is synthetic and was created to simulate a realistic supermarket business environment.
+👤 Author
+
+Naveen Kumar
+
+Data Analytics / Data Science Learner
 - CSV
 - GitHub
