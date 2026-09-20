@@ -113,6 +113,7 @@ Stores
 DateTable
 
 📐 Key DAX Measures
+
 Total Sales =
 SUMX(
     sales_clean,
@@ -120,27 +121,33 @@ SUMX(
     sales_clean[UnitPrice] *
     (1 - sales_clean[Discount])
 )
+
 Total Cost =
 SUMX(
     sales_clean,
     sales_clean[Quantity] *
     RELATED(vw_products_clean[CostPrice])
 )
+
 Total Profit =
 [Total Sales] - [Total Cost]
+
 Profit Margin % =
 DIVIDE(
     [Total Profit],
     [Total Sales]
 )
+
 Total Transactions =
 DISTINCTCOUNT(
     sales_clean[TransactionID]
 )
+
 Total Units Sold =
 SUM(
     sales_clean[Quantity]
 )
+
 Return Rate % =
 DIVIDE(
     [Returned Units],
